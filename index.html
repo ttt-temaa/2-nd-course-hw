@@ -2,9 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
+
 <body>
+<header class="header center">
+    <h1 class="header__title">Добро пожаловать на мой сайт мини-игр</h1>
+    <p class="header__text">Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай <span
+            class="header__text-bold">«Поехали!»</span> и <span class="header__text-bold">приступай.</span>
+    </p>
+    <button class="header__button" onclick="startGame()">Поехали!</button>
+</header>
+<div class="banner">
+    <div class="banner__text">Викторина</div>
+    <div class="banner__text">угадай число</div>
+    <div class="banner__text">Переверни текст</div>
+    <div class="banner__text">Простая арифметика</div>
+    <div class="banner__text">Камень, ножницы, бумага</div>
+    <div class="banner__text">Генератор случайных цветов</div>
+</div>
+<section class="img-container center">
+    <h2 class="title" id="Об_играх">Об играх</h2>
+        <p class="title-text">В моей коллекции представлено 6 игр на разные темы. Игры несложные — в них может поиграть
+            каждый. Все игры доступны для пользования.</p>
+    <div class="img">
+        <a class="img__card" href="#">
+            <div class="img__item img__item_1"></div>
+            <div class="img__number">Игра № 1</div>
+            <div class="img__text">Угадай число</div>
+        </a>
+        <a class="img__card" href="#">
+            <div class="img__item img__item_2"></div>
+            <div class="img__number">Игра № 2</div>
+            <div class="img__text">Простая арифметика</div>
+        </a>
+        <a class="img__card" href="#">
+            <div class="img__item img__item_3"></div>
+            <div class="img__number">Игра № 3</div>
+            <div class="img__text">Переверни текст</div>
+        </a>
+        <a class="img__card img__card_top" href="#">
+            <div class="img__item img__item_4"></div>
+            <div class="img__number">Игра № 4</div>
+            <div class="img__text">Камень, ножницы, бумага</div>
+        </a>
+        <a class="img__card" href="#">
+            <div class="img__item img__item_5"></div>
+            <div class="img__number">Игра № 5</div>
+            <div class="img__text">Простая викторина</div>
+        </a>
+        <a class="img__card img__card_top" href="#">
+            <div class="img__item img__item_6"></div>
+            <div class="img__number">Игра № 6</div>
+            <div class="img__text">Генератор случайных цветов</div>
+        </a>
+    </div>
+</section>
+<section class="play-container center">
+    <h2 class="title title-mini">Мини-игры</h2>
+    <div class="play">
+        <div class="play__item play__item_1 play__item_right">
+            <div class="play__title">Угадай число</div>
+            <div class="play__text">Попробуй угадать случайное <br>число от 1 до 100.</div>
+            <button class="play__button" onclick="playGame(1)">Играть!</button>
+        </div>
+        <div class="play__item play__item_2 play__item_left">
+            <div class="play__title">Простая арифметика</div>
+            <div class="play__text">Попробуй решить простые арифметические задачи.</div>
+            <button class="play__button" onclick="playGame(2)">Играть!</button>
+        </div>
+        <div class="play__item play__item_3 play__item_right">
+            <div class="play__title">Переверни текст</div>
+            <div class="play__text">Попробуй ввести текст, который <br>будет перевернут.</div>
+            <button class="play__button" onclick="playGame(3)">Играть!</button>
+        </div>
+        <div class="play__item play__item_4 play__item_left">
+            <div class="play__title">Камень, ножницы, бумага</div>
+            <div class="play__text">Отвечай на вопросы викторины <br>c вариантами ответов.</div>
+            <button class="play__button" onclick="playGame(4)">Играть!</button>
+        </div>
+        <div class="play__item play__item_5 play__item_right">
+            <div class="play__title">Простая викторина</div>
+            <div class="play__text">Сыграй в популярную игру <br>против компьютера.</div>
+            <button class="play__button" onclick="playGame(5)">Играть!</button>
+        </div>
+        <div class="play__item play__item_6 play__item_left">
+            <div class="play__title">Генератор случайных цветов</div>
+            <div class="play__text">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</div>
+            <button class="play__button" onclick="playGame(6)">Играть!</button>
+        </div>
+    </div>
+</section>
+<footer>
+    <h3 class="footer">Все права защищены.</h3>
+</footer>
+
+<script>
+    function startGame() {
+        alert('Игра начинается!');
+    }
+
+    function playGame(gameText) {
+        alert(`Запуск игры №${gameText}`);
+    }
+</script>
 
 </body>
 </html>

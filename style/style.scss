@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.header {
+  max-height: 800px;
+  background: rgb(225, 255, 143);
+  background-repeat: no-repeat;
+  background-position: calc(100% + 480px) -400px, calc(100% + -1312px) 88px, calc(100% + -1258px) 50px, calc(100% + -346px) 540px, calc(100% + -436px) 495px;
+  overflow: hidden;
+  background-image: url("/img/Star-top.svg"), url("/img/Star_2.svg"),
+  url("/img/Star_3.svg"), url("/img/Star_4.svg"), url("/img/Star_5.svg");
+
+  &__title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 78px;
+    width: 768px;
+    padding-top: 196px;
+    padding-bottom: 24px;
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    width: 720px;
+    padding-bottom: 48px;
+
+    &-bold {
+      font-weight: 600;
+    }
+  }
+
+  &__button {
+    width: 247px;
+    height: 66px;
+    border: 1px solid rgb(32, 32, 39);
+    border-radius: 60px;
+    background: rgb(32, 32, 39);
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 156px;
+    font-family: "Montserrat";
+  }
+}
+
+.banner {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 27px 49px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(50px);
+  background: rgb(188, 236, 48);
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: space-between;
+
+  &__text {
+    color: rgb(32, 32, 39);
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-right: 51px;
+    padding-left: 51px;
+  }
+}
+
+.title {
+  margin: 0;
+  color: rgb(255, 255, 255);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  text-align: left;
+  padding-top: 77px;
+  padding-bottom: 24px;
+
+  &-mini {
+    padding-top: 46px;
+    padding-bottom: 72px;
+  }
+
+  &-text {
+    margin: 0;
+    width: 700px;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    padding-bottom: 72px;
+
+  }
+}
+
+.img-container {
+  background: rgb(32, 32, 39);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: calc(100% + 91px) 94px, calc(100% + -1355px) 730px, calc(100% + -1322px) 794px;
+  background-image: url("/img/Star_1.svg"), url("/img/Star_11.svg"), url("/img/Star_12.svg");
+  overflow: hidden;
+}
+
+.img {
+  max-height: 1060px;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 32px;
+  align-items: start;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 4;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+
+    &_top {
+      margin-top: -40px;
+    }
+  }
+
+  &__item {
+    border-radius: 30px;
+    height: 314px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__item_1 {
+    background: url(/img/card1.svg);
+  }
+
+  &__item_2 {
+    background: url(/img/card2.svg);
+  }
+
+  &__item_3 {
+    background: url(/img/card3.svg);
+  }
+
+  &__item_4 {
+    background: url(/img/card4.svg);
+  }
+
+  &__item_5 {
+    background: url(/img/card5.svg);
+  }
+
+  &__item_6 {
+    background: url(/img/card6.svg);
+  }
+
+  &__number {
+    width: 111px;
+    height: 36px;
+    color: rgb(32, 32, 39);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 52.58px;
+    background: rgb(247, 247, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13px;
+    margin-left: 32px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: rgb(32, 32, 39);
+    font-size: 32px;
+    font-weight: 700;
+    text-align: left;
+    padding: 0 36px 32px;
+    max-width: 372px;
+  }
+
+}
+
+.play-container {
+  background: rgb(32, 32, 39);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 49px) 111px, calc(100% + -125px) 85px, calc(100% + -47px) 3372px, calc(100% + -139px) 3426px;
+  background-image: url("/img/Star_6.svg"), url("/img/Star_7.svg"), url("/img/Star_8.svg"), url("/img/Star_10.svg");
+  overflow: hidden;
+  padding-bottom: 144px;
+}
+
+.play {
+  border-radius: 30px;
+
+  &__item {
+    margin-bottom: 32px;
+    border-radius: 30px;
+    color: rgb(32, 32, 39);
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 100%;
+    padding: 48px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+
+    &_right {
+      background-position-x: right;
+    }
+
+    &_left {
+      background-position-x: left;
+      align-items: flex-end;
+    }
+  }
+
+  &__item_1 {
+    background-image: url(/img/img1.svg);
+  }
+
+  &__item_2 {
+    background-image: url(/img/img2.svg);
+  }
+
+  &__item_3 {
+    background-image: url(/img/img3.svg);
+  }
+
+  &__item_4 {
+    background-image: url(/img/img4.svg);
+  }
+
+  &__item_5 {
+    background-image: url(/img/img5.svg);
+  }
+
+  &__item_6 {
+    background-image: url(/img/img6.svg);
+  }
+
+  &__title {
+    color: rgb(32, 32, 39);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 59px;
+    padding-bottom: 24px;
+    width: 504px;
+  }
+
+  &__text {
+    color: rgb(32, 32, 39);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    padding-bottom: 36px;
+    width: 500px;
+  }
+
+  &__button {
+    width: 247px;
+    height: 66px;
+    border: 1px solid rgb(32, 32, 39);
+    border-radius: 60px;
+    background: rgb(32, 32, 39);
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-right: 260px;
+    font-family: "Montserrat";
+  }
+}
+
+.footer {
+  height: 150px;
+  background: rgb(189, 237, 53);
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: center;
+  padding-top: 61px;
+}
+
+@import 'params';
+
+
