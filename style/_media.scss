@@ -1,0 +1,31 @@
+.img-container {
+  display: block;
+}
+
+@media (max-width: 376px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .img-container {
+    display: none;
+  }
+  .play {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+  }
+  .play__title{
+    font-size: 32px;
+  }
+  .play__text {
+    color: rgb(32, 32, 39);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    padding-bottom: 36px;
+    width: 500px;
+  }
+}
