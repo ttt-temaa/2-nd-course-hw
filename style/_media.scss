@@ -95,8 +95,17 @@
   .img-container {
     display: none;
   }
+  .play-container {
+    background: rgb(32, 32, 39);
+    /* height: 100%; */
+    /* background-repeat: no-repeat; */
+    /* background-position: calc(100% - 49px) 111px, calc(100% - 125px) 85px, calc(100% - 47px) 3372px, calc(100% - 139px) 3426px; */
+    /* background-image: url(/img/Star_6.svg), url(/img/Star_7.svg), url(/img/Star_8.svg), url(/img/Star_10.svg); */
+    /* overflow: hidden; */
+    padding-bottom: 50px;
+  }
   .play {
-    margin-bottom: -108px;
+
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
