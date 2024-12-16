@@ -29,10 +29,10 @@
 </div>
 <section class="img-container center">
     <h2 class="title" id="Об_играх">Об играх</h2>
-        <p class="title-text">В моей коллекции представлено 6 игр на разные темы. Игры несложные — в них может поиграть
-            каждый. Все игры доступны для пользования.</p>
+    <p class="title-text">В моей коллекции представлено 6 игр на разные темы. Игры несложные — в них может поиграть
+        каждый. Все игры доступны для пользования.</p>
     <div class="img">
-        <a class="img__card" href="#">
+        <a class="img__card" href="#" onclick="startGuessNumberGame()">
             <div class="img__item img__item_1"></div>
             <div class="img__number">Игра № 1</div>
             <div class="img__text">Угадай число</div>
@@ -110,6 +110,41 @@
 
     function playGame(gameText) {
         alert(`Запуск игры №${gameText}`);
+    }
+
+    function startGuessNumberGame() {
+        const targetNumber = Math.floor(Math.random() * 100) + 1; // Случайное число от 1 до 100
+        let attempts = 0;
+        let guessed = false;
+
+        alert("Добро пожаловать в игру 'Угадай число'! Я загадал число от 1 до 100. Попробуйте угадать.");
+
+        while (!guessed) {
+            const userGuess = prompt("Введите число от 1 до 100:");
+
+            if (userGuess === null) {
+                alert("Игра завершена. Спасибо за участие!");
+                return;
+            }
+
+            const guess = Number(userGuess);
+
+            if (isNaN(guess) || guess < 1 || guess > 100) {
+                alert("Пожалуйста, введите корректное число от 1 до 100.");
+                continue;
+            }
+
+            attempts++;
+
+            if (guess === targetNumber) {
+                alert(`Поздравляем! Вы угадали число ${targetNumber} за ${attempts} попыток.`);
+                guessed = true;
+            } else if (guess < targetNumber) {
+                alert("Загаданное число больше. Попробуйте ещё раз!");
+            } else {
+                alert("Загаданное число меньше. Попробуйте ещё раз!");
+            }
+        }
     }
 </script>
 
