@@ -34,32 +34,32 @@
     <p class="title-text">В моей коллекции представлено 6 игр на разные темы. Игры несложные — в них может поиграть
         каждый. Все игры доступны для пользования.</p>
     <div class="img">
-        <a id="scrollButton" class="img__card" href="#">
+        <a class="img__card game-card" data-target="game1">
             <div class="img__item img__item_1"></div>
             <div class="img__number">Игра № 1</div>
             <div class="img__text">Угадай число</div>
         </a>
-        <a class="img__card" href="#">
+        <a class="img__card game-card" data-target="game2">
             <div class="img__item img__item_2"></div>
             <div class="img__number">Игра № 2</div>
             <div class="img__text">Простая арифметика</div>
         </a>
-        <a class="img__card" href="#">
+        <a class="img__card game-card" data-target="game3">
             <div class="img__item img__item_3"></div>
             <div class="img__number">Игра № 3</div>
             <div class="img__text">Переверни текст</div>
         </a>
-        <a class="img__card img__card_top" href="#">
+        <a class="img__card game-card" data-target="game4">
             <div class="img__item img__item_4"></div>
             <div class="img__number">Игра № 4</div>
             <div class="img__text">Камень, ножницы, бумага</div>
         </a>
-        <a class="img__card" href="#">
-            <div class="img__item img__item_5"></div>
+        <a class="img__card game-card" data-target="game5">
+        <div class="img__item img__item_5"></div>
             <div class="img__number">Игра № 5</div>
             <div class="img__text">Простая викторина</div>
         </a>
-        <a class="img__card img__card_top" href="#">
+        <a class="img__card game-card" data-target="game6">
             <div class="img__item img__item_6"></div>
             <div class="img__number">Игра № 6</div>
             <div class="img__text">Генератор случайных цветов</div>
@@ -69,7 +69,7 @@
 <section id="gamesPlay" class="play-container center">
     <h2 class="title title-mini">Мини-игры</h2>
     <div class="play">
-        <div id="miniGames" class="play__item-row-reverse">
+        <div id="game1" class="play__item-row-reverse">
             <img src="/img/img1.svg" alt="Угадай число" class="play__image">
             <div class="play__inf">
                 <div class="play__title">Угадай число</div>
@@ -77,15 +77,15 @@
                 <button class="play__button" onclick="startGuessNumberGame()">Играть!</button>
             </div>
         </div>
-        <div class="play__item">
+        <div id="game2" class="play__item">
             <img src="/img/img2.svg" alt="Простая арифметика" class="play__image">
             <div class="play__inf">
                 <div class="play__title">Простая арифметика</div>
                 <div class="play__text">Попробуй решить простые арифметические задачи.</div>
-                <button class="play__button" onclick="playGame(2)">Играть!</button>
+                <button class="play__button" onclick="playGame2(2)">Играть!</button>
             </div>
         </div>
-        <div class="play__item-row-reverse">
+        <div id="game3" class="play__item-row-reverse">
             <img src="/img/img3.svg" alt="Переверни текст" class="play__image">
             <div class="play__inf">
                 <div class="play__title">Переверни текст</div>
@@ -93,7 +93,7 @@
                 <button class="play__button" onclick="playGame(3)">Играть!</button>
             </div>
         </div>
-        <div class="play__item">
+        <div id="game4" class="play__item">
             <img src="/img/img4.svg" alt="Викторина" class="play__image">
             <div class="play__inf">
                 <div class="play__title">Викторина</div>
@@ -101,7 +101,7 @@
                 <button class="play__button" onclick="playGame(4)">Играть!</button>
             </div>
         </div>
-        <div class="play__item-row-reverse">
+        <div id="game5" class="play__item-row-reverse">
             <img src="/img/img5.svg" alt="Камень, ножницы, бумага" class="play__image">
             <div class="play__inf">
                 <div class="play__title">Камень, ножницы, бумага</div>
@@ -109,7 +109,7 @@
                 <button class="play__button" onclick="playGame(5)">Играть!</button>
             </div>
         </div>
-        <div class="play__item">
+        <div id="game6" class="play__item">
             <img src="/img/img6.svg" alt="Генератор случайных цветов" class="play__image">
             <div class="play__inf">
                 <div class="play__title">Генератор случайных цветов</div>

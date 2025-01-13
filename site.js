@@ -48,34 +48,65 @@ document.getElementById('startButton').addEventListener('click', () => {
         // Переход к секции gamesPlay для маленьких экранов
         const gamesPlaySection = document.getElementById('gamesPlay');
         if (gamesPlaySection) {
-            gamesPlaySection.scrollIntoView({ behavior: 'smooth' });
+            gamesPlaySection.scrollIntoView({behavior: 'smooth'});
         }
     } else {
         // Переход к секции aboutGames для больших экранов
         const aboutGamesSection = document.getElementById('aboutGames');
         if (aboutGamesSection) {
-            aboutGamesSection.scrollIntoView({ behavior: 'smooth' });
+            aboutGamesSection.scrollIntoView({behavior: 'smooth'});
         }
     }
 });
 
 document.querySelectorAll('.game-card').forEach(card => {
     card.addEventListener('click', (event) => {
-        event.stopPropagation();
-
-        const targetId = card.getAttribute('data-target');
-        const targetSection = document.getElementById(targetId);
+        event.preventDefault(); // Предотвращает стандартное действие ссылки
+        const targetId = card.getAttribute('data-target'); // Получает целевой ID из data-атрибута
+        const targetSection = document.getElementById(targetId); // Находит секцию по ID
 
         if (targetSection) {
-            targetSection.scrollIntoView({ behavior: 'smooth' });
+            targetSection.scrollIntoView({ behavior: 'smooth' }); // Плавно скроллит к секции
         }
     });
 });
 
-const scrollButton = document.getElementById('scrollButton');
-const miniGamesSection = document.getElementById('miniGames');
 
-scrollButton.addEventListener('click', (event) => {
-    event.preventDefault();
-    miniGamesSection.scrollIntoView({ behavior: 'smooth' });
-});
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function generateProblem() {
+    const operators = ['+', '-', '*', '/'];
+    const num1 = getRandomInt(1, 10);
+    const num2 = getRandomInt(1, 10);
+    const operator = operators[getRandomInt(0, operators.length - 1)];
+
+    let problem = `${num1} ${operator} ${num2}`;
+    let answer;
+    switch (operator) {
+        case '+':
+            answer = num1 + num2;
+            break;
+        case '-':
+            answer = num1 - num2;
+            break;
+        case '*':
+            answer = num1 * num2;
+            break;
+        case '/':
+            answer = num1 / num2;
+            break;
+    }
+    return {problem, answer};
+}
+
+function playGame2() {
+    const {problem, answer} = generateProblem();
+    const userAnswer = parseFloat(prompt(`Решите задачу: ${problem}`));
+    if (userAnswer === answer) {
+        alert('Правильно!');
+    } else {
+        alert(`Ошибка. Правильный ответ: ${answer}`);
+    }
+}
