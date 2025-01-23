@@ -66,7 +66,7 @@ document.querySelectorAll('.game-card').forEach(card => {
         const targetSection = document.getElementById(targetId); // Находит секцию по ID
 
         if (targetSection) {
-            targetSection.scrollIntoView({ behavior: 'smooth' }); // Плавно скроллит к секции
+            targetSection.scrollIntoView({behavior: 'smooth'}); // Плавно скроллит к секции
         }
     });
 });
@@ -75,6 +75,7 @@ document.querySelectorAll('.game-card').forEach(card => {
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
 
 function generateProblem() {
     const operators = ['+', '-', '*', '/'];
@@ -101,6 +102,7 @@ function generateProblem() {
     return {problem, answer};
 }
 
+
 function playGame2() {
     const {problem, answer} = generateProblem();
     const userAnswer = parseFloat(prompt(`Решите задачу: ${problem}`));
@@ -111,6 +113,7 @@ function playGame2() {
     }
 }
 
+
 function playGame3() {
     const userInput = prompt("Введите текст, который нужно перевернуть:");
     if (userInput !== null) {
@@ -120,6 +123,7 @@ function playGame3() {
         alert("Вы не ввели текст.");
     }
 }
+
 
 function playGame4() {
     const quiz = [
@@ -151,4 +155,33 @@ function playGame4() {
     }
 
     alert(`Вы ответили правильно на ${correctCount} из ${quiz.length} вопросов.`);
+}
+
+
+function playGame5() {
+
+    const userChoice = prompt("Выберите: камень, ножницы или бумага").toLowerCase();
+
+    if (!["камень", "ножницы", "бумага"].includes(userChoice)) {
+        alert("Неверный выбор. Попробуйте снова.");
+        return;
+    }
+
+    const choices = ["камень", "ножницы", "бумага"];
+    const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+    let result;
+    if (userChoice === computerChoice) {
+        result = "Ничья!";
+    } else if (
+        (userChoice === "камень" && computerChoice === "ножницы") ||
+        (userChoice === "ножницы" && computerChoice === "бумага") ||
+        (userChoice === "бумага" && computerChoice === "камень")
+    ) {
+        result = "Вы победили!";
+    } else {
+        result = "Вы проиграли!";
+    }
+
+    alert(`Ваш выбор: ${userChoice}\nВыбор компьютера: ${computerChoice}\n${result}`);
 }
