@@ -185,3 +185,17 @@ function playGame5() {
 
     alert(`Ваш выбор: ${userChoice}\nВыбор компьютера: ${computerChoice}\n${result}`);
 }
+
+function playGame6() {
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    document.documentElement.style.setProperty('--bg-color', getRandomColor());
+    document.body.style.backgroundColor = getRandomColor();
+    console.log("Функция вызвана!"); //Тестирование, работает ли вообще кнопка, потому что ничего не меняет. Кнопка работает, но не функционирует
+}
