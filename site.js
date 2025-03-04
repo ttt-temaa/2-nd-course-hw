@@ -195,7 +195,13 @@ function playGame6() {
         }
         return color;
     }
-    document.documentElement.style.setProperty('--bg-color', getRandomColor());
-    document.body.style.backgroundColor = getRandomColor();
-    console.log("Функция вызвана!"); //Тестирование, работает ли вообще кнопка, потому что ничего не меняет. Кнопка работает, но не функционирует
+
+    const newColor = getRandomColor();
+    document.body.style.backgroundColor = newColor;
+    document.querySelectorAll('.header, .banner, #aboutGames, #gamesPlay, footer')
+        .forEach(el => {
+            el.style.backgroundColor = newColor;
+        });
+
+    console.log("Фон изменен на:", newColor);
 }
